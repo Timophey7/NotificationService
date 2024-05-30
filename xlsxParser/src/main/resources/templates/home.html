@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2; /* Светло-серый фон */
+            color: #333; /* Темно-серый текст */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #008000; /* Зеленый заголовок */
+            margin-bottom: 20px;
+        }
+
+        .upload-form {
+            background-color: #e0f2e0; /* Светло-зеленый фон формы */
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .upload-form input[type="file"] {
+            display: none; /* Скрыть стандартный элемент выбора файла */
+        }
+
+        .upload-form label {
+            display: inline-block;
+            background-color: #008000; /* Зеленая кнопка */
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s; /* Плавно меняем цвет при наведении */
+        }
+
+        .upload-form label:hover {
+            background-color: #006400; /* Темно-зеленый цвет при наведении */
+        }
+
+        button[type="submit"] {
+            background-color: #008000; /* Зеленая кнопка */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #006400; /* Темно-зеленый цвет при наведении */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Загрузка контактов</h1>
+    <p th:text="${message}"></p>
+    <form method="POST" action="/v1/xlsx/parse/uploadFile" enctype="multipart/form-data" class="upload-form">
+        <label for="file">Выбрать файл</label>
+        <input type="file" id="file" name="file" />
+        <button type="submit">Загрузить</button>
+    </form>
+</div>
+</body>
+</html>

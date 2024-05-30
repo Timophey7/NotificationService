@@ -1,0 +1,117 @@
+2024-05-30 13:43:27 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 13:43:27 [main] INFO  c.p.r.XlsxInfoRepositoryTest - Starting XlsxInfoRepositoryTest using Java 22.0.1 with PID 19564 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 13:43:27 [main] INFO  c.p.r.XlsxInfoRepositoryTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 13:43:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-05-30 13:43:28 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 134 ms. Found 1 JPA repository interface.
+2024-05-30 13:43:28 [main] INFO  o.s.b.t.a.j.TestDatabaseAutoConfiguration$EmbeddedDataSourceBeanFactoryPostProcessor - Replacing 'dataSource' DataSource bean with embedded version
+2024-05-30 13:43:28 [main] INFO  o.s.j.d.e.EmbeddedDatabaseFactory - Starting embedded database: url='jdbc:h2:mem:45f6f37e-a5a2-4719-a5ea-2bd211e72d16;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false', username='sa'
+2024-05-30 13:43:28 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-05-30 13:43:28 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-05-30 13:43:28 [main] INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-05-30 13:43:29 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-05-30 13:43:29 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-05-30 13:43:29 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-05-30 13:43:30 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-05-30 13:43:30 [main] INFO  c.p.r.XlsxInfoRepositoryTest - Started XlsxInfoRepositoryTest in 2.753 seconds (process running for 3.795)
+2024-05-30 13:43:30 [main] WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 42102, SQLState: 42S02
+2024-05-30 13:43:30 [main] ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Таблица "USER_INFO" не найдена
+Table "USER_INFO" not found; SQL statement:
+delete from user_info where id = 1 [42102-224]
+2024-05-30 13:43:30 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-05-30 14:34:30 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 14:34:30 [main] INFO  c.p.controller.ParserControllerTest - Starting ParserControllerTest using Java 22.0.1 with PID 4504 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 14:34:30 [main] INFO  c.p.controller.ParserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 14:34:33 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-05-30 14:34:33 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-05-30 14:34:33 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 0 ms
+2024-05-30 14:34:33 [main] INFO  c.p.controller.ParserControllerTest - Started ParserControllerTest in 3.028 seconds (process running for 4.096)
+2024-05-30 14:34:33 [main] INFO  c.p.controller.ParserController - homeMethodPoint
+2024-05-30 14:41:20 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 14:41:20 [main] INFO  c.p.controller.ParserControllerTest - Starting ParserControllerTest using Java 22.0.1 with PID 14316 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 14:41:20 [main] INFO  c.p.controller.ParserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 14:41:22 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-05-30 14:41:22 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-05-30 14:41:22 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-05-30 14:41:22 [main] INFO  c.p.controller.ParserControllerTest - Started ParserControllerTest in 2.827 seconds (process running for 3.824)
+2024-05-30 14:42:17 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 14:42:17 [main] INFO  c.p.controller.ParserControllerTest - Starting ParserControllerTest using Java 22.0.1 with PID 7896 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 14:42:17 [main] INFO  c.p.controller.ParserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 14:42:19 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-05-30 14:42:19 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-05-30 14:42:19 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-05-30 14:42:20 [main] INFO  c.p.controller.ParserControllerTest - Started ParserControllerTest in 2.827 seconds (process running for 3.775)
+2024-05-30 14:42:46 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 14:42:46 [main] INFO  c.p.controller.ParserControllerTest - Starting ParserControllerTest using Java 22.0.1 with PID 1048 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 14:42:46 [main] INFO  c.p.controller.ParserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 14:42:49 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-05-30 14:42:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-05-30 14:42:49 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-05-30 14:42:49 [main] INFO  c.p.controller.ParserControllerTest - Started ParserControllerTest in 2.869 seconds (process running for 3.831)
+2024-05-30 14:48:53 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 14:48:53 [main] INFO  c.p.controller.ParserControllerTest - Starting ParserControllerTest using Java 22.0.1 with PID 3176 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 14:48:53 [main] INFO  c.p.controller.ParserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 14:48:56 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-05-30 14:48:56 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-05-30 14:48:56 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-05-30 14:48:56 [main] INFO  c.p.controller.ParserControllerTest - Started ParserControllerTest in 2.814 seconds (process running for 3.765)
+2024-05-30 14:49:20 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 14:49:20 [main] INFO  c.p.controller.ParserControllerTest - Starting ParserControllerTest using Java 22.0.1 with PID 19488 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 14:49:20 [main] INFO  c.p.controller.ParserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 14:49:22 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-05-30 14:49:22 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-05-30 14:49:22 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-05-30 14:49:22 [main] INFO  c.p.controller.ParserControllerTest - Started ParserControllerTest in 2.758 seconds (process running for 3.711)
+2024-05-30 14:49:22 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'file' is not present.]
+2024-05-30 14:50:45 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 14:50:46 [main] INFO  c.p.controller.ParserControllerTest - Starting ParserControllerTest using Java 22.0.1 with PID 7860 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 14:50:46 [main] INFO  c.p.controller.ParserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 14:50:48 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-05-30 14:50:48 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-05-30 14:50:48 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-05-30 14:50:48 [main] INFO  c.p.controller.ParserControllerTest - Started ParserControllerTest in 2.787 seconds (process running for 3.753)
+2024-05-30 14:50:48 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'file' is not present.]
+2024-05-30 14:56:39 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 14:56:39 [main] INFO  c.p.controller.ParserControllerTest - Starting ParserControllerTest using Java 22.0.1 with PID 3632 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 14:56:39 [main] INFO  c.p.controller.ParserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 14:56:42 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-05-30 14:56:42 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-05-30 14:56:42 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-05-30 14:56:42 [main] INFO  c.p.controller.ParserControllerTest - Started ParserControllerTest in 2.786 seconds (process running for 3.755)
+2024-05-30 14:57:02 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 14:57:02 [main] INFO  c.p.controller.ParserControllerTest - Starting ParserControllerTest using Java 22.0.1 with PID 20084 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 14:57:02 [main] INFO  c.p.controller.ParserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 14:57:04 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-05-30 14:57:04 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-05-30 14:57:04 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-05-30 14:57:04 [main] INFO  c.p.controller.ParserControllerTest - Started ParserControllerTest in 3.0 seconds (process running for 4.123)
+2024-05-30 14:58:24 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 14:58:24 [main] INFO  c.p.controller.ParserControllerTest - Starting ParserControllerTest using Java 22.0.1 with PID 776 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 14:58:24 [main] INFO  c.p.controller.ParserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 14:58:27 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-05-30 14:58:27 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-05-30 14:58:27 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-05-30 14:58:27 [main] INFO  c.p.controller.ParserControllerTest - Started ParserControllerTest in 2.821 seconds (process running for 3.849)
+2024-05-30 14:58:27 [main] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.multipart.support.MissingServletRequestPartException: Required part 'file' is not present.]
+2024-05-30 15:08:39 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 15:08:40 [main] INFO  c.p.controller.ParserControllerTest - Starting ParserControllerTest using Java 22.0.1 with PID 2900 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 15:08:40 [main] INFO  c.p.controller.ParserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 15:08:42 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-05-30 15:08:42 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-05-30 15:08:42 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-05-30 15:08:42 [main] INFO  c.p.controller.ParserControllerTest - Started ParserControllerTest in 2.91 seconds (process running for 3.894)
+2024-05-30 15:08:55 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 15:08:55 [main] INFO  c.p.controller.ParserControllerTest - Starting ParserControllerTest using Java 22.0.1 with PID 14536 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 15:08:55 [main] INFO  c.p.controller.ParserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 15:08:57 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-05-30 15:08:57 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-05-30 15:08:57 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 1 ms
+2024-05-30 15:08:57 [main] INFO  c.p.controller.ParserControllerTest - Started ParserControllerTest in 2.751 seconds (process running for 3.703)
+2024-05-30 15:08:58 [main] INFO  c.p.controller.ParserController - send message to kafka
+2024-05-30 15:10:29 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-05-30 15:10:29 [main] INFO  c.p.controller.ParserControllerTest - Starting ParserControllerTest using Java 22.0.1 with PID 9292 (started by Димыч in C:\Users\Димыч\Downloads\pastebin\notificationSystem\xlsxParser)
+2024-05-30 15:10:29 [main] INFO  c.p.controller.ParserControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-05-30 15:10:31 [main] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-05-30 15:10:31 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Initializing Servlet ''
+2024-05-30 15:10:31 [main] INFO  o.s.t.w.s.TestDispatcherServlet - Completed initialization in 2 ms
+2024-05-30 15:10:31 [main] INFO  c.p.controller.ParserControllerTest - Started ParserControllerTest in 2.737 seconds (process running for 3.755)
+2024-05-30 15:10:31 [main] INFO  c.p.controller.ParserController - send message to kafka

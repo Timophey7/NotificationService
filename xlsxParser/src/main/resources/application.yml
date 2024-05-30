@@ -1,0 +1,36 @@
+spring:
+  kafka:
+    bootstrap-servers: localhost:29092
+  application:
+    name: xlsxParser
+  datasource:
+    url: jdbc:postgresql://localhost:5433/notificationService?user=${POSTGRES_NAME}&password=${POSTGRES_PASS}
+    username: ${POSTGRES_NAME}
+    password: ${POSTGRES_PASS}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+server:
+  port: 8085
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+
+management:
+  endpoints.web.exposure.include: 'prometheus, health'
+  metrics:
+    distribution:
+      percentiles-histogram:
+        "[http.server.requests]": true
+  prometheus:
+    metrics:
+      export:
+        enabled: true
