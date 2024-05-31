@@ -2,14 +2,7 @@ version: "3.8"
 
 services:
 
-  postgres:
-    image: postgres:13.3
-    ports:
-      - "5435:5435"
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: notificationService
+
 
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.4
