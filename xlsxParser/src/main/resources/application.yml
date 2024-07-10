@@ -1,19 +1,23 @@
 spring:
+  liquibase:
+    change-log: classpath:db/changelog/liquibase-changelog.yaml
+    enabled: true
   kafka:
     bootstrap-servers: localhost:29092
   application:
     name: xlsxParser
   datasource:
-    url: jdbc:postgresql://localhost:5433/notificationService?user=${POSTGRES_NAME}&password=${POSTGRES_PASS}
+    url: jdbc:postgresql://localhost:5433/notificationService?$user=${POSTGRES_NAME}&password=${POSTGRES_PASSWORD}
     username: ${POSTGRES_NAME}
-    password: ${POSTGRES_PASS}
+    password: ${POSTGRES_NAME}
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
 server:
   port: 8085
 
