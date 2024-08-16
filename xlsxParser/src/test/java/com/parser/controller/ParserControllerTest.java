@@ -1,5 +1,6 @@
 package com.parser.controller;
 
+import com.parser.exceptions.TextIsEmptyException;
 import com.parser.mappers.MapToXlsxInfoResponse;
 import com.parser.model.XlsxInfo;
 import com.parser.model.XlsxInfoResponse;
@@ -16,6 +17,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.mock.web.MockHttpSession;
 import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.ResultActions;
@@ -32,8 +34,7 @@ import java.util.List;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.junit.jupiter.api.Assertions.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(controllers = { ParserController.class })
 @AutoConfigureMockMvc(addFilters = false)
@@ -70,11 +71,18 @@ class ParserControllerTest {
 
     @Test
     void homeShouldReturnStatusIsOk() throws Exception {
+        MockHttpSession mockSession = new MockHttpSession();
+        String message = "Вы успешно отправили письма!";
+        mockSession.setAttribute("message", message);
 
-        ResultActions perform = mockMvc.perform(get("/v1/xlsx/parse/home"));
+        ResultActions perform = mockMvc.perform(get("/v1/xlsx/parse/home")
+                        .session(mockSession)
+                        .accept(MediaType.TEXT_HTML))
+                .andExpect(status().isOk());
 
         perform.andExpect(status().isOk())
-                .andExpect(model().attributeExists("message"));
+                .andExpect(model().attributeExists("message"))
+                .andExpect(view().name("home"));
 
     }
 
@@ -88,15 +96,27 @@ class ParserControllerTest {
         );
 
         mockMvc.perform(multipart("/v1/xlsx/parse/uploadFile").file(file))
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(view().name("upload-file"));
     }
 
     @Test
-    void uploadFileShouldReturnError() throws Exception {
+    void uploadFile_error() throws Exception {
+        MockMultipartFile file = new MockMultipartFile("file", "test.xlsx",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                new byte[]{});
 
+        Exception exception = new RuntimeException("Ошибка при обработке файла");
+        doThrow(exception).when(parseInfoFromXlsService).parseXLS(any());
 
-        mockMvc.perform(multipart("/v1/xlsx/parse/uploadFile"))
-                .andExpect(status().is4xxClientError());
+        mockMvc.perform(MockMvcRequestBuilders.multipart("/v1/xlsx/parse//uploadFile")
+                        .file(file)
+                        .accept(MediaType.TEXT_HTML))
+                .andExpect(status().isOk())
+                .andExpect(MockMvcResultMatchers.view().name("home"))
+                .andExpect(MockMvcResultMatchers.model().attribute("fileError", exception.getMessage()));
+
+        verify(parseInfoFromXlsService).parseXLS(any());
     }
 
     @Test
@@ -113,6 +133,22 @@ class ParserControllerTest {
 
 
     }
+
+    @Test
+    void sendMessages_TextIsEmptyException() throws Exception {
+        TextIsEmptyException textIsEmptyException = new TextIsEmptyException("текст пустой");
+        doThrow(textIsEmptyException).when(parseInfoFromXlsService).sendMessage("");
+
+        ResultActions perform = mockMvc.perform(post("/v1/xlsx/parse/send")
+                .param("text", ""));
+
+        perform.andExpect(view().name("upload-file"))
+                .andExpect(model().attribute("textError","текст пустой"));
+
+
+    }
+
+
 
 
 }

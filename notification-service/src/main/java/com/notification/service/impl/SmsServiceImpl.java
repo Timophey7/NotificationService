@@ -14,7 +14,6 @@ public class SmsServiceImpl implements SmsService {
 
     private static final String SERVICE_PLAN_ID = "your service plan id";
     private static final String TOKEN = "your token";
-    private static ApiConnection conn;
 
     @Timed("sendSmsMethod")
     @Override

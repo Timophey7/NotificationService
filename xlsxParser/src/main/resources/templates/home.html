@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Home page</title>
@@ -77,6 +77,7 @@
         <input type="file" id="file" name="file" />
         <button type="submit">Загрузить</button>
     </form>
+    <p th:if="${fileError} != null" th:text="${fileError}"></p>
 </div>
 </body>
 </html>

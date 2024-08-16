@@ -2,15 +2,6 @@ version: "3.8"
 
 services:
 
-  postgres:
-    image: postgres:13.3
-    ports:
-      - "5435:5435"
-    environment:
-      POSTGRES_USER: user
-      POSTGRES_PASSWORD: password
-      POSTGRES_DB: notificationService
-
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.4
     environment:
@@ -50,16 +41,4 @@ services:
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=admin
 
-  logstash:
-    image: docker.elastic.co/logstash/logstash:8.3.3
-    container_name: logstash_springboot
-    volumes:
-      - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
-      - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
-    ports:
-      - "5044:5044"
-      - "5000:5000/tcp"
-      - "5000:5000/udp"
-      - "9600:9600"
-    environment:
-      LS_JAVA_OPTS: "-Xmx256m -Xms256m"
+
